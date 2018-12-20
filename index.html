@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>Nano Time</title>
+    <link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+    <link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+    <!-- load theme file for your application -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="ui-page ui-page-active" id="main">
+        <div class="nano-time page-1 " index="1">
+            <div class="no-area answer-area">
+                <div class="no-icon icon"></div>
+            </div>
+            <div class="center-content">
+                <div class="logo-area">
+                    <div class="logo-image"></div>
+                </div>
+                <div class="content">Ready fo your Nano Time?</div>
+            </div>
+            <div class="yes-area answer-area" onclick="goToPage(2)" onmousedown="goToPage(2)" ontouchstart="goToPage(2)">
+                <div class="yes-icon icon"></div>
+            </div>
+        </div>
+        <div class="nano-time page-2 hidden " index="2">
+            <div class="interaction-image-container">
+                <div class="interaction-image"></div>
+            </div>
+            <div class="interaction-title">Policy <span class="blue">Update</span>
+            </div>
+            <div class="interaction-text">Starting January 1st, we now offer a new insurance policy: Electric Scooter. The Dutch law (CVC) 407.5(a) defines a motorized scooter as any two-wheeled device that has handlebars, has a floorboard that is designed to be stood upon when riding,
+                and is powered by an electric motor. CVC 21235 mandates that all scooter riders in all of Holland must:
+                <ol>
+                    <li>Wear a properly fitted bicycle helmet</li>
+                    <li>Have a valid driver license</li>
+                    <li>Ride on the road and remain off sidewalks</li>
+                    <li>May not park scooters on a sidewalk in a position that blocks pedestrian paths</li>
+                </ol>
+                The above is a mandatory term in order for the new policy (VDH) 118.7 to take under consideration
+            </div>
+            <div class="question">
+                <div class="question-title">Question</div>
+                which of the following is a prerequisite for the new policy?
+            </div>
+            <div class="answer-area">
+                <div class="answer" onclick="goToPage(3)" onmousedown="goToPage(3)" ontouchstart="goToPage(3)">Wear helmet</div>
+                <div class="answer" onclick="goToPage(3)" onmousedown="goToPage(3)" ontouchstart="goToPage(3)">Driver license</div>
+                <div class="answer" onclick="goToPage(3)" onmousedown="goToPage(3)" ontouchstart="goToPage(3)">Ride on the road</div>
+                <div class="answer" onclick="goToPage(3)" onmousedown="goToPage(3)" ontouchstart="goToPage(3)">All of the above</div>
+
+            </div>
+        </div>
+
+        <div class="nano-time page-3 hidden " index="3">
+            <div class="logo-area">
+                <div class="logo-image"></div>
+
+            </div>
+            <div class="interaction-text">That's right!</div>
+            <div class="interaction-approve" onclick="goToPage(1)" onmousedown="goToPage(1)" ontouchstart="goToPage(1)">
+                <div class="yes-icon icon"></div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/tau/wearable/js/tau.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/lowBatteryCheck.js"></script>
+    <script src="js/circle-helper.js"></script>
+</body>
+
+</html>
